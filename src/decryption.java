@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 public class decryption {
     public static void main(String[] args) {
 
-        try (RandomAccessFile randomAccessFile = new RandomAccessFile("C:\\Users\\User\\IdeaProjects\\JavaProjects\\Shifr5.txt", "rw");
+        try (RandomAccessFile randomAccessFile = new RandomAccessFile("C:\\Users\\User\\IdeaProjects\\JavaProjects\\Shifr2.txt", "rw");
              FileChannel channel = randomAccessFile.getChannel()) {
             ByteBuffer buffer = ByteBuffer.allocate((int) channel.size());
             StringBuilder builder = new StringBuilder();
@@ -36,7 +36,7 @@ public class decryption {
             System.out.println(shifr2);
 
 
-            Path file3 = Paths.get("Shifr4.txt");
+            Path file3 = Paths.get("Shifr3.txt");
             Files.createFile(file3);
             Files.write(file3, shifr2.getBytes());
 

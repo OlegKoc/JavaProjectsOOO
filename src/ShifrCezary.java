@@ -37,7 +37,7 @@ public class ShifrCezary {
             System.out.println(shifr2);
 
 
-            Path file3 = Paths.get("Shifr3sdw.txt");
+            Path file3 = Paths.get("Shifr4.txt");
             Files.createFile(file3);
             Files.write(file3, shifr2.getBytes());
 
