@@ -22,24 +22,24 @@ public class ShifrCezary {
             }
 
             int key = 7;
-            char[] shifr = new char[builder.length()];
-            for (int i = 0; i < shifr.length; i++) {
+            char[] code = new char[builder.length()];
+            for (int i = 0; i < code.length; i++) {
                 if (Character.isLetter(builder.charAt(i)) && Character.isUpperCase(builder.charAt(i)))
 
-                    shifr[i] = (char) ((int) (builder.charAt(i)) + key);
+                    code[i] = (char) ((int) (builder.charAt(i)) + key);
                 else if (Character.isLetter(builder.charAt(i)) && Character.isLowerCase(builder.charAt(i))) {
-                    shifr[i] = (char) ((int) (builder.charAt(i)) + key);
+                    code[i] = (char) ((int) (builder.charAt(i)) + key);
                 } else {
-                    shifr[i] = builder.charAt(i);
+                    code[i] = builder.charAt(i);
                 }
             }
-            String shifr2 = String.copyValueOf(shifr);
-            System.out.println(shifr2);
+            String code2 = String.copyValueOf(code);
+            System.out.println(code2);
 
 
             Path file3 = Paths.get("Shifr4.txt");
             Files.createFile(file3);
-            Files.write(file3, shifr2.getBytes());
+            Files.write(file3, code2.getBytes());
 
 
         } catch (FileNotFoundException e) {
